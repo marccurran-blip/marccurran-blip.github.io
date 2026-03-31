@@ -3,39 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marc's Website</title>
+    <title>Marc's Science Resources</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', system-ui, sans-serif;
             max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: #f4f6fb;
+            color: #1a1a2e;
         }
         h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+            color: #1a1a2e;
+            border-bottom: 3px solid #1976d2;
+            padding-bottom: 12px;
+            font-size: 2em;
         }
         p {
             font-size: 1.1em;
             line-height: 1.6;
+            color: #444;
         }
-        .highlight {
-            background-color: #3498db;
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
+        .card-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: block;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+        .card h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.3em;
+        }
+        .card p {
+            margin: 0;
+            font-size: 0.95em;
+            color: #666;
+        }
+        .student-card h2 { color: #1976d2; }
+        .teacher-card h2 { color: #d4570a; }
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .student-badge { background: #ddeeff; color: #0d3d6e; }
+        .teacher-badge { background: #fdebd9; color: #7c2f00; }
+        @media (max-width: 600px) {
+            .card-container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to Marc's Website</h1>
-    <p>This site is hosted on GitHub Pages. It's live and ready to customise!</p>
-    <div class="highlight">
-        <p>You can edit this page by updating the index.html file in your GitHub repository.</p>
+    <h1>IGCSE Science Resources</h1>
+    <p>Welcome! Choose a version of the Scheme of Work below.</p>
+    <div class="card-container">
+        <a href="Science_Scheme_of_Work.html" class="card student-card">
+            <span class="badge student-badge">STUDENT</span>
+            <h2>Student Edition</h2>
+            <p>View the IGCSE Science Scheme of Work - student-facing version with topics, key words, and learning objectives.</p>
+        </a>
+        <a href="Science_Scheme_of_Work_TEACHER.html" class="card teacher-card">
+            <span class="badge teacher-badge">TEACHER</span>
+            <h2>Teacher Edition</h2>
+            <p>Full teacher version with additional notes, resources, and planning details.</p>
+        </a>
     </div>
 </body>
 </html>
