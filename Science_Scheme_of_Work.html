@@ -2620,7 +2620,7 @@ Lab Book: Pages 48–50</div><div class="info-scroll"><div class="student-sectio
   </div>
 </div>
 <footer class="site-footer">
-  <span>Updated 18 Apr 2026 08:37</span>
+  <span>Updated 18 Apr 2026 09:10</span>
 </footer>
 <script>
 const tabs = document.querySelectorAll('.nav-tab');
@@ -2670,15 +2670,6 @@ subjectBtns.forEach(btn => {
     btn.classList.add('active');
     activeSubject = btn.dataset.subject;
     applyFilters();
-    /* In Double/SA panels, scroll to the subject anchor */
-    const activeTab = document.querySelector('.nav-tab.active');
-    if (activeTab && (activeTab.dataset.tab === 'double' || activeTab.dataset.tab === 'sa')) {
-      const subject = btn.dataset.subject;
-      if (subject !== 'all') {
-        const anchor = document.getElementById('jump-' + activeTab.dataset.tab + '-' + subject);
-        if (anchor) setTimeout(() => anchor.scrollIntoView({behavior:'smooth', block:'start'}), 50);
-      }
-    }
   });
 });
 const searchBox = document.getElementById('searchBox');
